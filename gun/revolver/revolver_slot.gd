@@ -1,7 +1,6 @@
-extends Resource
+extends MeshInstance3D
 class_name RevolverSlot
 
-var mesh: MeshInstance3D
 var status: Status
 
 enum Status {
@@ -10,7 +9,13 @@ enum Status {
 	EMPTY
 }
 
-func _init(mesh: MeshInstance3D, status: Status = Status.UNSPENT) -> void:
-	self.mesh = mesh
+func _init(status: Status = Status.UNSPENT) -> void:
 	self.status = status
 	
+
+func isEmpty() -> bool:
+	return status == Status.EMPTY
+	
+
+func isSpent() -> bool:
+	return status == Status.SPENT
