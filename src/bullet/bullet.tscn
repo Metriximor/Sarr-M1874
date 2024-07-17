@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca3ttbxsgialc"]
 
-[ext_resource type="Script" path="res://bullet/bullet.gd" id="1_msuu2"]
-[ext_resource type="ArrayMesh" uid="uid://dm3bkswxxgye1" path="res://bullet/bullet.res" id="2_wbhbe"]
+[ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_msuu2"]
+[ext_resource type="ArrayMesh" uid="uid://dm3bkswxxgye1" path="res://src/bullet/bullet.res" id="2_wbhbe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xwlwf"]
 rough = true
