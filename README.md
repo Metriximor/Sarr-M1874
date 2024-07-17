@@ -3,15 +3,15 @@ Learning Godot by making a simple FPS game with basic fps controller, semi detai
 
 # Controls
 
-WASD -> Movement
-Shift + WASD -> Sprint
-Space -> Jump
-Escape -> Close Game
-Left Click -> Shoot
-Right Click (Hold) -> Aim
-C -> Cycle Weapon
-E -> Unload Bullet
-R -> Reload Bullet
+* WASD -> Movement
+* Shift + WASD -> Sprint
+* Space -> Jump
+* Escape -> Close Game
+* Left Click -> Shoot
+* Right Click (Hold) -> Aim
+* C -> Cycle Weapon
+* E -> Unload Bullet
+* R -> Reload Bullet
 
 # Credits
 
