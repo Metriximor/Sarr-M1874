@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cagcpxyhem1xw"
-path="res://.godot/imported/sarr_animation_unload_all.fbx-dd9f66f8334016022de01a466651fe3b.scn"
+uid="uid://c8stglsb1ynjh"
+path="res://.godot/imported/sarr_mk1.fbx-b1ae0079b51a9321688b3a9cc89b5839.scn"
 
 [deps]
 
-source_file="res://gun/sarr_m1874/animations/sarr_animation_unload_all.fbx"
-dest_files=["res://.godot/imported/sarr_animation_unload_all.fbx-dd9f66f8334016022de01a466651fe3b.scn"]
+source_file="res://src/gun/sarr_m1874/sarr_mk1.fbx"
+dest_files=["res://.godot/imported/sarr_mk1.fbx-b1ae0079b51a9321688b3a9cc89b5839.scn"]
 
 [params]
 
@@ -31,7 +31,14 @@ animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"standardSurface1": {
+"use_external/enabled": true,
+"use_external/path": "res://src/gun/sarr_m1874/sarr_m1874_material.tres"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://buvfr11hu18o8"]
 
-[ext_resource type="Script" path="res://gun/gun.gd" id="1_mamkh"]
+[ext_resource type="Script" path="res://src/gun/gun.gd" id="1_mamkh"]
 [ext_resource type="PackedScene" uid="uid://ca3ttbxsgialc" path="res://src/bullet/bullet.tscn" id="2_c4wly"]
-[ext_resource type="Animation" uid="uid://duoo3ilfhvec7" path="res://gun/sarr_m1874/animations/recoil.res" id="3_7fmav"]
-[ext_resource type="PackedScene" uid="uid://b35qwj0tcp87n" path="res://gun/sarr_m1874/sarr_m1874.tscn" id="4_0qe8w"]
-[ext_resource type="AudioStream" uid="uid://dcknvxevh3tnn" path="res://gun/sarr_m1874/sound_fx/gunshot.mp3" id="4_erfvb"]
+[ext_resource type="Animation" uid="uid://duoo3ilfhvec7" path="res://src/gun/sarr_m1874/animations/recoil.res" id="3_7fmav"]
+[ext_resource type="PackedScene" uid="uid://b35qwj0tcp87n" path="res://src/gun/sarr_m1874/sarr_m1874.tscn" id="4_0qe8w"]
+[ext_resource type="AudioStream" uid="uid://dcknvxevh3tnn" path="res://src/gun/sarr_m1874/sound_fx/gunshot.mp3" id="4_erfvb"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_acw2h"]
 _data = {
