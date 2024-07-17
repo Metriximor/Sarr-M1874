@@ -13,9 +13,10 @@ class_name Gun
 @onready var default_pos: Vector3 = self.transform.origin
 
 func shoot(shoot_location: Vector3) -> void:
-	var knockback_is_playing: bool= knockback.is_playing()
-	var can_shoot: bool= gun_model.can_shoot()
-	if knockback_is_playing or not can_shoot:
+	if knockback.is_playing():
+		return
+		
+	if not gun_model.pulling_trigger_is_going_to_fire():
 		return
 	
 	knockback.play("shoot")
