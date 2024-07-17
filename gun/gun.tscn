@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://buvfr11hu18o8"]
+
+[ext_resource type="Script" path="res://gun/gun.gd" id="1_mamkh"]
+[ext_resource type="PackedScene" uid="uid://ca3ttbxsgialc" path="res://bullet/bullet.tscn" id="2_c4wly"]
+[ext_resource type="Animation" uid="uid://duoo3ilfhvec7" path="res://gun/sarr_m1874/animations/recoil.res" id="3_7fmav"]
+[ext_resource type="PackedScene" uid="uid://b35qwj0tcp87n" path="res://gun/sarr_m1874/sarr_m1874.tscn" id="4_0qe8w"]
+[ext_resource type="AudioStream" uid="uid://dcknvxevh3tnn" path="res://gun/sarr_m1874/sound_fx/gunshot.mp3" id="4_erfvb"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_acw2h"]
+_data = {
+"shoot": ExtResource("3_7fmav")
+}
+
+[node name="Gun" type="Node3D" node_paths=PackedStringArray("knockback", "barrel_raycast", "sight_raycast", "gunshot_audio", "gun_model")]
+script = ExtResource("1_mamkh")
+knockback = NodePath("AnimationPlayer")
+barrel_raycast = NodePath("AnimatedPosition/Bullet Spawn")
+sight_raycast = NodePath("AnimatedPosition/Sight")
+bullet_scene = ExtResource("2_c4wly")
+gunshot_audio = NodePath("AnimatedPosition/Shooting Sound")
+gun_model = NodePath("AnimatedPosition/gunanimation_")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_acw2h")
+}
+
+[node name="AnimatedPosition" type="Node3D" parent="."]
+
+[node name="gunanimation_" parent="AnimatedPosition" instance=ExtResource("4_0qe8w")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Bullet Spawn" type="RayCast3D" parent="AnimatedPosition"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4869e-14, 0.1875, -0.735193)
+target_position = Vector3(0, 0, -1)
+debug_shape_custom_color = Color(0.98764, 0.0940391, 0.0825857, 1)
+
+[node name="Sight" type="RayCast3D" parent="AnimatedPosition"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.072, 0.253576, -0.67)
+target_position = Vector3(0, 0, -1)
+debug_shape_thickness = 1
+
+[node name="Shooting Sound" type="AudioStreamPlayer3D" parent="AnimatedPosition"]
+transform = Transform3D(1, 0, 2.77556e-15, 0, 1, 0, -2.77556e-15, 0, 1, -7.10543e-15, 0.186781, -0.705644)
+stream = ExtResource("4_erfvb")
