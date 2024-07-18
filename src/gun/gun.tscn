@@ -13,10 +13,10 @@ _data = {
 
 [node name="Gun" type="Node3D" node_paths=PackedStringArray("knockback", "barrel_raycast", "sight_raycast", "gunshot_audio", "gun_model")]
 script = ExtResource("1_mamkh")
+bullet_scene = ExtResource("2_c4wly")
 knockback = NodePath("AnimationPlayer")
 barrel_raycast = NodePath("AnimatedPosition/Bullet Spawn")
 sight_raycast = NodePath("AnimatedPosition/Sight")
-bullet_scene = ExtResource("2_c4wly")
 gunshot_audio = NodePath("AnimatedPosition/Shooting Sound")
 gun_model = NodePath("AnimatedPosition/gunanimation_")
 

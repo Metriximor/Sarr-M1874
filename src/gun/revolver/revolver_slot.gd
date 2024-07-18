@@ -9,8 +9,8 @@ enum Status {
 	EMPTY
 }
 
-func _init(status: Status = Status.UNSPENT) -> void:
-	self.status = status
+func _init(initial_status: Status = Status.UNSPENT) -> void:
+	self.status = initial_status
 	
 
 func isEmpty() -> bool:
