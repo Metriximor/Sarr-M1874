@@ -29,7 +29,7 @@ func _ready() -> void:
 		bullet.mesh = unspent_bullet
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("cycle"):
 		cycle()
 	if Input.is_action_just_pressed("unload"):
@@ -62,6 +62,8 @@ func unload() -> void:
 func pulling_trigger_is_going_to_fire() -> bool:
 	if current_barrel_slot.isSpent():
 		blank_bullet_fx.play()
+		return false
+	if current_barrel_slot.isEmpty():
 		return false
 	return true
 
