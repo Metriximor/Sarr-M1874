@@ -1,0 +1,89 @@
+[gd_scene load_steps=20 format=3 uid="uid://b35qwj0tcp87n"]
+
+[ext_resource type="PackedScene" uid="uid://c8stglsb1ynjh" path="res://src/gun/sarr_m1874/sarr_mk1.fbx" id="1_el3hp"]
+[ext_resource type="Script" path="res://src/gun/sarr_m1874/sarr_m_1874.gd" id="2_dmtix"]
+[ext_resource type="Script" path="res://src/gun/revolver/revolver_slot.gd" id="3_6mys3"]
+[ext_resource type="ArrayMesh" uid="uid://bilb8r20ysm5x" path="res://src/bullet/bullet_unspent.res" id="3_fsxbr"]
+[ext_resource type="Animation" uid="uid://d1tfguexaden0" path="res://src/gun/sarr_m1874/animations/cycle_0.res" id="4_1xsau"]
+[ext_resource type="Animation" uid="uid://cv1e4vd2udq45" path="res://src/gun/sarr_m1874/animations/cycle_1.res" id="5_niwfh"]
+[ext_resource type="Animation" uid="uid://cjpqo3jaiux0i" path="res://src/gun/sarr_m1874/animations/cycle_2.res" id="7_in2mk"]
+[ext_resource type="Animation" uid="uid://blnrqok4nhf4d" path="res://src/gun/sarr_m1874/animations/cycle_4.res" id="8_an7bb"]
+[ext_resource type="Animation" uid="uid://4j11eujma5yh" path="res://src/gun/sarr_m1874/animations/unload_0.res" id="8_nn2kf"]
+[ext_resource type="Animation" uid="uid://up8n1hksdadi" path="res://src/gun/sarr_m1874/animations/cycle_5.res" id="9_7cggp"]
+[ext_resource type="Animation" uid="uid://cjae6gs74rqeu" path="res://src/gun/sarr_m1874/animations/unload_1.res" id="9_s7ibp"]
+[ext_resource type="Animation" uid="uid://b87tqu8gv7kag" path="res://src/gun/sarr_m1874/animations/unload_2.res" id="10_06gke"]
+[ext_resource type="Animation" uid="uid://b4kks75rqyiwh" path="res://src/gun/sarr_m1874/animations/unload_3.res" id="11_0eol3"]
+[ext_resource type="Animation" uid="uid://cpchgngt8o4vl" path="res://src/gun/sarr_m1874/animations/unload_4.res" id="12_hfeg7"]
+[ext_resource type="Animation" uid="uid://c7ienuh7y67sy" path="res://src/gun/sarr_m1874/animations/unload_5.res" id="13_ljqg3"]
+[ext_resource type="Animation" uid="uid://myvhpk86ru3o" path="res://src/gun/sarr_m1874/animations/cycle_3.res" id="16_xs5iv"]
+[ext_resource type="AudioStream" uid="uid://dln7slp4oyhma" path="res://src/gun/sarr_m1874/sound_fx/cycle.mp3" id="17_tfkdm"]
+[ext_resource type="AudioStream" uid="uid://cpgc2e7wp2sjt" path="res://src/gun/sarr_m1874/sound_fx/blank_bullet.mp3" id="18_k2mr3"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i18x6"]
+_data = {
+"cycle_0": ExtResource("4_1xsau"),
+"cycle_1": ExtResource("5_niwfh"),
+"cycle_2": ExtResource("7_in2mk"),
+"cycle_3": ExtResource("16_xs5iv"),
+"cycle_4": ExtResource("8_an7bb"),
+"cycle_5": ExtResource("9_7cggp"),
+"unload_0": ExtResource("8_nn2kf"),
+"unload_1": ExtResource("9_s7ibp"),
+"unload_2": ExtResource("10_06gke"),
+"unload_3": ExtResource("11_0eol3"),
+"unload_4": ExtResource("12_hfeg7"),
+"unload_5": ExtResource("13_ljqg3")
+}
+
+[node name="SarrM1874" node_paths=PackedStringArray("animationPlayer", "revolver_slots", "cycle_fx", "blank_bullet_fx") instance=ExtResource("1_el3hp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("2_dmtix")
+unspent_bullet = ExtResource("3_fsxbr")
+animationPlayer = NodePath("AnimationPlayer")
+revolver_slots = [NodePath("gun/barrel/pCylinder41"), NodePath("gun/barrel/pCylinder40"), NodePath("gun/barrel/pCylinder37"), NodePath("gun/barrel/pCylinder35"), NodePath("gun/barrel/pCylinder38"), NodePath("gun/barrel/pCylinder39")]
+cycle_fx = NodePath("CycleFx")
+blank_bullet_fx = NodePath("EmptyBulletFx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_i18x6")
+}
+
+[node name="barrel" parent="gun" index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0780025, 0.228278, -4.44794e-05)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder35" parent="gun/barrel" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, 0.0416213, 4.44794e-05)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder37" parent="gun/barrel" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, 0.0211397, -0.0370889)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder38" parent="gun/barrel" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, 0.0211397, 0.0371745)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder39" parent="gun/barrel" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, -0.0213172, 0.0371745)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder40" parent="gun/barrel" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, -0.0213172, -0.0370855)
+script = ExtResource("3_6mys3")
+
+[node name="pCylinder41" parent="gun/barrel" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0581453, -0.0421304, 4.44794e-05)
+script = ExtResource("3_6mys3")
+
+[node name="pSphere4" parent="gun" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185963, 0.228326, 5.92526e-05)
+
+[node name="CycleFx" type="AudioStreamPlayer3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.216734, 0.225553, 9.47373e-09)
+stream = ExtResource("17_tfkdm")
+
+[node name="EmptyBulletFx" type="AudioStreamPlayer3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16729, 0.172748, 7.31247e-09)
+stream = ExtResource("18_k2mr3")

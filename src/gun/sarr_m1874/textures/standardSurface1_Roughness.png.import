@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sbwj0tyjvp07"
-path.s3tc="res://.godot/imported/standardSurface1_Metallic.png-f54c26902f50682c86d39b84dafd5957.s3tc.ctex"
-path.etc2="res://.godot/imported/standardSurface1_Metallic.png-f54c26902f50682c86d39b84dafd5957.etc2.ctex"
+uid="uid://c7kl2o74mpf0q"
+path.s3tc="res://.godot/imported/standardSurface1_Roughness.png-d8a37a065ae9efa983f2867dcdb0f9be.s3tc.ctex"
+path.etc2="res://.godot/imported/standardSurface1_Roughness.png-d8a37a065ae9efa983f2867dcdb0f9be.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/sarr_m1874/textures/standardSurface1_Metallic.png"
-dest_files=["res://.godot/imported/standardSurface1_Metallic.png-f54c26902f50682c86d39b84dafd5957.s3tc.ctex", "res://.godot/imported/standardSurface1_Metallic.png-f54c26902f50682c86d39b84dafd5957.etc2.ctex"]
+source_file="res://src/gun/sarr_m1874/textures/standardSurface1_Roughness.png"
+dest_files=["res://.godot/imported/standardSurface1_Roughness.png-d8a37a065ae9efa983f2867dcdb0f9be.s3tc.ctex", "res://.godot/imported/standardSurface1_Roughness.png-d8a37a065ae9efa983f2867dcdb0f9be.etc2.ctex"]
 
 [params]
 

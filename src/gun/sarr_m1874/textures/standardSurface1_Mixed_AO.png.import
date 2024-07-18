@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c66w2vut40517"
-path.s3tc="res://.godot/imported/standardSurface1_Height.png-4bf48a1e7c935186c3a949607dd56039.s3tc.ctex"
-path.etc2="res://.godot/imported/standardSurface1_Height.png-4bf48a1e7c935186c3a949607dd56039.etc2.ctex"
+uid="uid://diwccexq5rq7l"
+path.s3tc="res://.godot/imported/standardSurface1_Mixed_AO.png-152e18d0a0263aac6819897fa605ae85.s3tc.ctex"
+path.etc2="res://.godot/imported/standardSurface1_Mixed_AO.png-152e18d0a0263aac6819897fa605ae85.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/sarr_m1874/textures/standardSurface1_Height.png"
-dest_files=["res://.godot/imported/standardSurface1_Height.png-4bf48a1e7c935186c3a949607dd56039.s3tc.ctex", "res://.godot/imported/standardSurface1_Height.png-4bf48a1e7c935186c3a949607dd56039.etc2.ctex"]
+source_file="res://src/gun/sarr_m1874/textures/standardSurface1_Mixed_AO.png"
+dest_files=["res://.godot/imported/standardSurface1_Mixed_AO.png-152e18d0a0263aac6819897fa605ae85.s3tc.ctex", "res://.godot/imported/standardSurface1_Mixed_AO.png-152e18d0a0263aac6819897fa605ae85.etc2.ctex"]
 
 [params]
 

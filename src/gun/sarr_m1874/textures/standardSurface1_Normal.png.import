@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnsqktd855so1"
-path.s3tc="res://.godot/imported/standardSurface1_Normal.png-df9dae25b6b011baba60e1b6b39c7544.s3tc.ctex"
-path.etc2="res://.godot/imported/standardSurface1_Normal.png-df9dae25b6b011baba60e1b6b39c7544.etc2.ctex"
+path.s3tc="res://.godot/imported/standardSurface1_Normal.png-c05349e9647b7c8c2d569dc4b49ef8d7.s3tc.ctex"
+path.etc2="res://.godot/imported/standardSurface1_Normal.png-c05349e9647b7c8c2d569dc4b49ef8d7.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://gun/sarr_m1874/textures/standardSurface1_Normal.png"
-dest_files=["res://.godot/imported/standardSurface1_Normal.png-df9dae25b6b011baba60e1b6b39c7544.s3tc.ctex", "res://.godot/imported/standardSurface1_Normal.png-df9dae25b6b011baba60e1b6b39c7544.etc2.ctex"]
+source_file="res://src/gun/sarr_m1874/textures/standardSurface1_Normal.png"
+dest_files=["res://.godot/imported/standardSurface1_Normal.png-c05349e9647b7c8c2d569dc4b49ef8d7.s3tc.ctex", "res://.godot/imported/standardSurface1_Normal.png-c05349e9647b7c8c2d569dc4b49ef8d7.etc2.ctex"]
 
 [params]
 
